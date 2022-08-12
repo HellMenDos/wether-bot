@@ -1,8 +1,6 @@
 import requests
-from dotenv import load_dotenv
-import os
-load_dotenv()
-wether_token = os.environ["WETHER_TOKEN"]
+
+wether_token = '89e80577932c72c6aa1ba520e19b6f92'
 
 url = lambda lat,lon: f"https://api.openweathermap.org/data/2.5/weather?lat={lat[1]}&lon={lon[1]}&appid={wether_token}&lang=RU"
 

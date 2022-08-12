@@ -2,7 +2,6 @@ from typing import Text
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher import FSMContext
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from dotenv import load_dotenv
 import aiogram.utils.markdown as fmt
 import os
 import asyncio
@@ -10,7 +9,6 @@ import wether_api
 import math
 from datetime import datetime
 
-load_dotenv()
 
 async def set_commands(bot: Bot):
     commands = [
@@ -20,7 +18,7 @@ async def set_commands(bot: Bot):
     await bot.set_my_commands(commands)
 
 async def main():
-    bot = Bot(token=os.environ['TOKEN'])
+    bot = Bot(token='5497045801:AAFAs5_zB9QgPZzvAikdDcPj3FlZNADuVQc')
     dp = Dispatcher(bot, storage=MemoryStorage())
 
     @dp.message_handler(commands="start")
